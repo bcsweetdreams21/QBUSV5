@@ -1,0 +1,240 @@
+----------------------------------
+--<!>-- BOII | DEVELOPMENT --<!>--
+----------------------------------
+
+--<!>-- DO NOT EDIT ANYTHING BELOW THIS TEXT UNLESS YOU KNOW WHAT YOU ARE DOING SUPPORT WILL NOT BE PROVIDED IF YOU IGNORE THIS --<!>--
+local Core = Config.CoreSettings.Core
+local CoreFolder = Config.CoreSettings.CoreFolder
+local Core = exports[CoreFolder]:GetCoreObject()
+local PhoneEvent = Config.CoreSettings.PhoneEvent
+local RemoveStress = Config.CoreSettings.RemoveStressEvent
+--<!>-- DO NOT EDIT ANYTHING ABOVE THIS TEXT UNLESS YOU KNOW WHAT YOU ARE DOING SUPPORT WILL NOT BE PROVIDED IF YOU IGNORE THIS --<!>--
+
+--<!>-- ITEMS --<!>--
+-- You can leave these items here, or move them into `boii-consumables/server/consumables_sv.lua`
+-- Drinks
+Core.Functions.CreateUseableItem('glass_water', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_glass', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Water..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'prop_pint_glass_tall', 28422, vector3(-0.005, 0.00, -0.01), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('glass_cocacola', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_glass', 'thirst', math.random(10,40), math.random(5,10), 'Drinking CocaCola..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'prop_pint_glass_tall', 28422, vector3(-0.005, 0.00, -0.01), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('glass_pepsi', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_glass', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Pepsi..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'prop_pint_glass_tall', 28422, vector3(-0.005, 0.00, -0.01), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('glass_drpepper', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_glass', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Dr Pepper..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'prop_pint_glass_tall', 28422, vector3(-0.005, 0.00, -0.01), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('glass_mountaindew', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_glass', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Mtn Dew..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'prop_pint_glass_tall', 28422, vector3(-0.005, 0.00, -0.01), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('glass_lemonade', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_glass', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Lemonade..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'prop_pint_glass_tall', 28422, vector3(-0.005, 0.00, -0.01), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('cup_coffee', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_cup', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Coffee..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_res_mcofcup', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('cup_tea', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_cup', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Tea..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_res_mcofcup', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('cup_greentea', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_cup', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Green Tea..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_res_mcofcup', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ramunecherry', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_cup', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Ramune..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_ind_cfbottle', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ramunelemon', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyglassbottle', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Ramune..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_ind_cfbottle', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ramunepapple', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyglassbottle', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Ramune..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_ind_cfbottle', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ramunepapple', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyglassbottle', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Ramune..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_ind_cfbottle', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ramunecoconut', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyglassbottle', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Ramune..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_ind_cfbottle', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ramuneorange', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyglassbottle', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Ramune..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_ind_cfbottle', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ramuneapple', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyglassbottle', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Ramune..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_ind_cfbottle', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ramunestrawberry', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyglassbottle', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Ramune..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_ind_cfbottle', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ramuneblueberry', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyglassbottle', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Ramune..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_ind_cfbottle', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end) 
+Core.Functions.CreateUseableItem('bobatea', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyplasticcup', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Boba Tea..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'prop_plastic_cup_02', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('matchabobatea', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyplasticcup', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Boba Tea..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'prop_plastic_cup_02', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ichigobobatea', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyplasticcup', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Boba Tea..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'prop_plastic_cup_02', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('lemonbobatea', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyplasticcup', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Boba Tea..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'prop_plastic_cup_02', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('bluebbobatea', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'emptyplasticcup', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Boba Tea..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'prop_plastic_cup_02', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('milk', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'cardboard', 'thirst', math.random(10,40), math.random(5,10), 'Drinking Milk..', math.random(3,5), 'amb@code_human_wander_drinking@male@idle_a', 'idle_c', 49, 'v_res_tt_milk', 28422, vector3(-0.005, 0.00, -0.05), vector3(175.0, 185.0, 0.0))
+end)
+
+-- Food
+Core.Functions.CreateUseableItem('ajibento', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_bentobox', 'hunger', math.random(10,40), math.random(5,10), 'Eating Bento Box..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'prop_ff_noodle_01', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+    -- "EVENT", "SOURCE", "COLLECTIBLES CHANCE USE 1 - 100 HERE"
+    TriggerClientEvent('boii-uwucafe:cl:OpenBento', source, 100)
+end)
+Core.Functions.CreateUseableItem('inadabento', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_bentobox', 'hunger', math.random(10,40), math.random(5,10), 'Eating Bento Box..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'prop_ff_noodle_01', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+    -- "EVENT", "SOURCE", "COLLECTIBLES CHANCE USE 1 - 100 HERE"
+    TriggerEvent('boii-uwucafe:sv:OpenBento', source, 5)
+end)
+Core.Functions.CreateUseableItem('akoudaibento', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_bentobox', 'hunger', math.random(10,40), math.random(5,10), 'Eating Bento Box..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'prop_ff_noodle_01', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+    -- "EVENT", "SOURCE", "COLLECTIBLES CHANCE USE 1 - 100 HERE"
+    TriggerEvent('boii-uwucafe:sv:OpenBento', source, 2)
+end)
+Core.Functions.CreateUseableItem('katsubento', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_bentobox', 'hunger', math.random(10,40), math.random(5,10), 'Eating Bento Box..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'prop_ff_noodle_01', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+    -- "EVENT", "SOURCE", "COLLECTIBLES CHANCE USE 1 - 100 HERE"
+    TriggerEvent('boii-uwucafe:sv:OpenBento', source, 6)
+end)
+Core.Functions.CreateUseableItem('chashubento', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_bentobox', 'hunger', math.random(10,40), math.random(5,10), 'Eating Bento Box..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'prop_ff_noodle_01', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+    -- "EVENT", "SOURCE", "COLLECTIBLES CHANCE USE 1 - 100 HERE"
+    TriggerEvent('boii-uwucafe:sv:OpenBento', source, 1)
+end)
+Core.Functions.CreateUseableItem('iwashiramen', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_bowl', 'hunger', math.random(10,40), math.random(5,10), 'Eating Ramen..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'prop_cs_bowl_01', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ajiramen', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_bowl', 'hunger', math.random(10,40), math.random(5,10), 'Eating Ramen..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'prop_cs_bowl_01', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ohyouramen', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_bowl', 'hunger', math.random(10,40), math.random(5,10), 'Eating Ramen..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'prop_cs_bowl_01', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('chickenramen', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_bowl', 'hunger', math.random(10,40), math.random(5,10), 'Eating Ramen..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'prop_cs_bowl_01', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('beeframen', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_bowl', 'hunger', math.random(10,40), math.random(5,10), 'Eating Ramen..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'prop_cs_bowl_01', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('akoudaisushi', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Sushi..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('inadasushi', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Sushi..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('iwashisushi', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Sushi..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('guchisushi', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Sushi..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ohyousushi', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Sushi..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ajisashimi', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Sashimi..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('akoudaisashimi', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Sashimi..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('ohyousashimi', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Sashimi..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('beefsashimi', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Sashimi..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('deersashimi', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Sashimi..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('nishdaifuki', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Daifuku..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('kurodaifuku', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Daifuku..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('mitadango', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Daifuku..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('matchacrepe', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Daifuku..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+Core.Functions.CreateUseableItem('mizuyokan', function(source, item)
+    TriggerClientEvent('boii-consumables:cl:Consumables', source, item.name, 'dirty_plate', 'hunger', math.random(10,40), math.random(5,10), 'Eating Daifuku..', math.random(3,5), 'mp_player_inteat@burger', 'mp_player_int_eat_burger_fp', 49, 'v_res_tt_pizzaplate', 60309, vector3(-0.005, 0.00, -0.01), vector3(175.0, 160.0, 0.0))
+end)
+--<!>-- ITEMS --<!>--
+
+--<!>-- PLUSHIES --<!>--
+-- Plushies
+Core.Functions.CreateUseableItem('arcadeplush01', function(source, item)
+    TriggerClientEvent('boii-uwucafe:cl:ShowPlushie', source, 'ch_prop_arcade_claw_plush_01a')
+end)
+Core.Functions.CreateUseableItem('arcadeplush02', function(source, item)
+    TriggerClientEvent('boii-uwucafe:cl:ShowPlushie', source, 'ch_prop_arcade_claw_plush_02a') 
+end)
+Core.Functions.CreateUseableItem('arcadeplush03', function(source, item)
+    TriggerClientEvent('boii-uwucafe:cl:ShowPlushie', source, 'ch_prop_arcade_claw_plush_03a') 
+end)
+Core.Functions.CreateUseableItem('arcadeplush04', function(source, item)
+    TriggerClientEvent('boii-uwucafe:cl:ShowPlushie', source, 'ch_prop_arcade_claw_plush_04a') 
+end)
+Core.Functions.CreateUseableItem('arcadeplush05', function(source, item)
+    TriggerClientEvent('boii-uwucafe:cl:ShowPlushie', source, 'ch_prop_arcade_claw_plush_05a')
+end)
+Core.Functions.CreateUseableItem('arcadeplush06', function(source, item)
+    TriggerClientEvent('boii-uwucafe:cl:ShowPlushie', source, 'ch_prop_arcade_claw_plush_06a')
+end)
+Core.Functions.CreateUseableItem('arcadeplush07', function(source, item)
+    TriggerClientEvent('boii-uwucafe:cl:ShowPlushie', source, 'ch_prop_princess_robo_plush_07a')
+end)
+Core.Functions.CreateUseableItem('arcadeplush08', function(source, item)
+    TriggerClientEvent('boii-uwucafe:cl:ShowPlushie', source, 'ch_prop_shiny_wasabi_plush_08a')
+end)
+Core.Functions.CreateUseableItem('arcadeplush09', function(source, item)
+    TriggerClientEvent('boii-uwucafe:cl:ShowPlushie', source, 'ch_prop_master_09a')
+end)
+--<!>-- PLUSHIES --<!>--
+
+--<!>-- BILLING EVENT START --<!>--
+RegisterServerEvent('boii-uwucafe:sv:Pay', function(playerId, amount)
+    local payee = Core.Functions.GetPlayer(source)
+    local payer = Core.Functions.GetPlayer(tonumber(playerId))
+    local amount = tonumber(amount)
+    if payee.PlayerData.job.name == Config.JobSettings.Job then
+        if payer ~= nil then
+            if payee.PlayerData.citizenid ~= payer.PlayerData.citizenid then
+                if amount and amount > 0 then
+                    exports.oxmysql:insert('INSERT INTO phone_invoices (citizenid, amount, society, sender, sendercitizenid) VALUES (@citizenid, @amount, @society, @sender, @sendercitizenid)', {
+                        ['@citizenid'] = payer.PlayerData.citizenid,
+                        ['@amount'] = amount,
+                        ['@society'] = payee.PlayerData.job.name,
+                        ['@sender'] = payee.PlayerData.charinfo.firstname,
+                        ['@sendercitizenid'] = payee.PlayerData.citizenid
+                    })
+                    TriggerClientEvent(PhoneEvent, payer.PlayerData.source)
+                    TriggerClientEvent('boii-uwucafe:notify', source, Language.Billing['invoicesent'], 'success')
+                    TriggerClientEvent('boii-uwucafe:notify', payer.PlayerData.source, Language.Billing['invoicereceived'])
+                else
+                    TriggerClientEvent('boii-uwucafe:notify', source, Language.Billing['minamount'], 'error')
+                end
+            else
+                TriggerClientEvent('boii-uwucafe:notify', source, Language.Billing['billself'], 'error')
+            end
+        else
+            TriggerClientEvent('boii-uwucafe:notify', source, Language.Billing['billoffline'], 'error')
+        end
+    else
+        TriggerClientEvent('boii-uwucafe:notify', source, Language.Billing['noaccess'], 'error')
+    end
+end)
+--<!>-- BILLING EVENT START --<!>--
